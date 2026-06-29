@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Life System - Création du Profil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <div class="container">
+
+    <h1>⚔️ Life System</h1>
+    <p class="subtitle">Création de ton personnage</p>
+
+    <!-- AVATAR -->
+    <div class="avatar-section">
+      <img id="avatarPreview" src="https://via.placeholder.com/120" />
+      <input type="file" accept="image/*" id="avatarInput">
+    </div>
+
+    <!-- NOM -->
+    <input type="text" id="name" placeholder="Ton nom">
+
+    <!-- OBJECTIF -->
+    <textarea id="goal" placeholder="Ton objectif de vie principal"></textarea>
+
+    <!-- STATS INITIALES -->
+    <div class="stats">
+      <h3>Statistiques initiales</h3>
+      <ul>
+        <li>🧠 Intelligence : Lv.1</li>
+        <li>💪 Santé : Lv.1</li>
+        <li>🛡 Discipline : Lv.1</li>
+        <li>💰 Finance : Lv.1</li>
+        <li>🤝 Social : Lv.1</li>
+        <li>🎨 Créativité : Lv.1</li>
+        <li>⚙ Productivité : Lv.1</li>
+        <li>🏡 Vie personnelle : Lv.1</li>
+      </ul>
+    </div>
+
+    <!-- INFO RPG -->
+    <div class="rpg-info">
+      <p>XP : 0 / 100</p>
+      <p>Niveau Global : 1</p>
+      <p>Rang : F</p>
+    </div>
+
+    <button onclick="startGame()">🚀 Commencer l'aventure</button>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
