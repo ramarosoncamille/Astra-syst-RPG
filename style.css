@@ -6,6 +6,7 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 0;
+  font-size: 18px;
 }
 .container {
   width: 100%;
@@ -14,8 +15,13 @@ body {
   background: rgba(255,255,255,0.03);
 }
 
-h1, .subtitle {
-  text-align: center;
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
 }
 
 .avatar-section img {
@@ -26,12 +32,8 @@ h1, .subtitle {
 }
 
 input, textarea {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
+  font-size: 18px;
+  padding: 14px;
 }
 
 textarea {
@@ -40,9 +42,8 @@ textarea {
 }
 
 .stats {
-  text-align: left;
-  margin-top: 15px;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .stats ul {
@@ -50,27 +51,21 @@ textarea {
 }
 
 .rpg-info {
-  margin-top: 10px;
-  font-size: 13px;
-  opacity: 0.9;
+  font-size: 17px;
+  margin-top: 15px;
 }
 
 button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #22c55e;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
 }
 
 button:hover {
   background: #16a34a;
 }
-
+.container > * {
+  margin-bottom: 15px;
+}
 @media screen and (max-width: 600px) {
   .container {
     width: 90%;
