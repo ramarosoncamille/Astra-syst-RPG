@@ -1,23 +1,55 @@
+/* ===========================
+   ASTRA RPG - PREMIUM CSS
+=========================== */
+
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html,
 body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0b1120);
+    color:white;
+}
 
-width:100%;
-height:100%;
-overflow:hidden;
+/* Fond lumineux animé */
+body::before{
 
-font-family:Arial,Helvetica,sans-serif;
+    content:"";
 
-background:linear-gradient(135deg,#0f172a,#1e293b);
+    position:fixed;
 
-color:white;
+    width:600px;
+    height:600px;
+
+    background:radial-gradient(circle,
+    rgba(0,255,255,.18),
+    transparent 70%);
+
+    top:-200px;
+    left:-150px;
+
+    animation:lightMove 10s linear infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes lightMove{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
 
 }
 
@@ -31,22 +63,43 @@ align-items:center;
 
 }
 
+/* ===========================
+      CONTENEUR
+=========================== */
+
 .container{
 
 width:100vw;
 height:100vh;
 
-padding:20px;
+padding:22px;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:space-evenly;
 
 background:rgba(255,255,255,.05);
 
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+
+0 0 50px rgba(0,0,0,.5),
+0 0 30px rgba(0,255,255,.08);
+
+animation:fadeUp .8s ease;
+
+position:relative;
+
+overflow:hidden;
+
 }
+
+/* ===========================
+      TITRE
+=========================== */
 
 .top{
 
@@ -56,19 +109,32 @@ text-align:center;
 
 h1{
 
-font-size:38px;
+font-size:40px;
 
-margin-bottom:10px;
+font-weight:700;
+
+letter-spacing:1px;
+
+text-shadow:
+
+0 0 12px cyan,
+0 0 30px rgba(0,255,255,.3);
+
+margin-bottom:8px;
 
 }
 
 .subtitle{
 
-font-size:18px;
+font-size:20px;
 
-opacity:.7;
+opacity:.8;
 
 }
+
+/* ===========================
+      AVATAR
+=========================== */
 
 .avatar-section{
 
@@ -78,17 +144,29 @@ text-align:center;
 
 .avatar-section img{
 
-width:170px;
-
-height:170px;
+width:180px;
+height:180px;
 
 border-radius:50%;
 
-border:4px solid white;
-
 object-fit:cover;
 
+border:4px solid rgba(255,255,255,.8);
+
+box-shadow:
+
+0 0 20px cyan,
+0 0 45px rgba(0,255,255,.35);
+
+transition:.4s;
+
 margin-bottom:15px;
+
+}
+
+.avatar-section img:hover{
+
+transform:scale(1.05);
 
 }
 
@@ -96,7 +174,13 @@ margin-bottom:15px;
 
 font-size:16px;
 
+color:white;
+
 }
+
+/* ===========================
+      FORMULAIRES
+=========================== */
 
 .form{
 
@@ -104,7 +188,7 @@ display:flex;
 
 flex-direction:column;
 
-gap:15px;
+gap:16px;
 
 }
 
@@ -115,33 +199,73 @@ width:100%;
 
 padding:18px;
 
-font-size:20px;
+font-size:22px;
 
-border:none;
+border-radius:15px;
 
-border-radius:12px;
+border:1px solid rgba(255,255,255,.18);
+
+background:rgba(255,255,255,.08);
+
+color:white;
 
 outline:none;
+
+transition:.3s;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+color:#d4d4d4;
+
+}
+
+input:focus,
+textarea:focus{
+
+border-color:#38bdf8;
+
+box-shadow:
+
+0 0 18px rgba(56,189,248,.5);
 
 }
 
 textarea{
 
-height:90px;
+height:95px;
 
 resize:none;
 
 }
 
+/* ===========================
+      STATISTIQUES
+=========================== */
+
 .stats{
 
-font-size:21px;
+padding:18px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:0 0 18px rgba(0,255,255,.08);
 
 }
 
 .stats h3{
 
-margin-bottom:10px;
+font-size:30px;
+
+margin-bottom:15px;
+
+text-align:center;
 
 }
 
@@ -149,102 +273,214 @@ margin-bottom:10px;
 
 list-style:none;
 
-line-height:1.9;
-
 }
 
-.rpg{
-
-text-align:center;
+.stats li{
 
 font-size:22px;
 
-line-height:1.8;
-
-}
-
-button{
-
-width:100%;
-
-padding:20px;
-
-font-size:24px;
-
-background:#22c55e;
-
-border:none;
-
-border-radius:14px;
-
-color:white;
-
-cursor:pointer;
+padding:8px 0;
 
 transition:.3s;
 
 }
 
-button:hover{
+.stats li:hover{
 
-background:#16a34a;
+transform:translateX(8px);
 
-transform:scale(1.02);
+color:#7dd3fc;
 
 }
+
+/* ===========================
+      XP / NIVEAU / RANG
+=========================== */
+
+.rpg{
+
+display:flex;
+
+gap:15px;
+
+margin-top:12px;
+
+}
+
+.rpg p{
+
+flex:1;
+
+text-align:center;
+
+padding:18px;
+
+font-size:24px;
+
+font-weight:bold;
+
+border-radius:15px;
+
+background:linear-gradient(
+135deg,
+rgba(0,255,255,.12),
+rgba(255,255,255,.06)
+);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 18px rgba(0,255,255,.15);
+
+transition:.3s;
+
+}
+
+.rpg p:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 0 25px cyan;
+
+}
+
+/* ===========================
+      BOUTON
+=========================== */
+
+button{
+
+width:100%;
+
+padding:22px;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:white;
+
+background:linear-gradient(
+90deg,
+#22c55e,
+#16a34a
+);
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+
+0 0 20px rgba(34,197,94,.4);
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 0 30px #22c55e,
+0 0 60px rgba(34,197,94,.5);
+
+}
+
+/* ===========================
+      ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
 
 @media(max-width:768px){
 
 .container{
 
-padding:15px;
+padding:18px;
 
 }
 
 h1{
 
-font-size:30px;
+font-size:34px;
 
 }
 
 .subtitle{
 
-font-size:16px;
+font-size:18px;
 
 }
 
 .avatar-section img{
 
-width:140px;
-
-height:140px;
+width:150px;
+height:150px;
 
 }
 
 input,
 textarea{
 
-font-size:18px;
+font-size:20px;
 
 padding:16px;
 
 }
 
-.stats{
+.stats h3{
 
-font-size:17px;
+font-size:24px;
 
 }
 
-.rpg{
+.stats li{
 
 font-size:18px;
 
 }
 
-button{
+.rpg p{
 
 font-size:20px;
+
+padding:16px;
+
+}
+
+button{
+
+font-size:22px;
 
 padding:18px;
 
