@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -80,4 +83,41 @@ button {
 
 button:hover {
   background: #16a34a;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .avatar-section img {
+    width: 100px;
+    height: 100px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 420px;
+    transform: scale(1.05);
+  }
 }
