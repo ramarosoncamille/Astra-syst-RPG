@@ -4,38 +4,25 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
   padding: 20px;
+  background: rgba(255,255,255,0.03);
 }
 
-.container {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 350px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+h1, .subtitle {
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 5px;
-}
-
-.subtitle {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-bottom: 20px;
-}
-
 .avatar-section img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid white;
-  margin-bottom: 10px;
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
 input, textarea {
