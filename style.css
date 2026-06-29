@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  padding: 20px;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
@@ -112,6 +112,14 @@ button:hover {
     padding: 12px;
     font-size: 15px;
   }
+}
+@media screen and (max-width: 600px) {
+
+  body {
+    display: block;
+    padding: 20px;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
