@@ -148,3 +148,18 @@ document.addEventListener("DOMContentLoaded", function () {
     loadDashboard();
 
 });
+//==============================
+// MENU LATERAL
+//==============================
+
+const menuButton = document.getElementById("menuToggle");
+
+if(menuButton){
+
+menuButton.addEventListener("click",function(){
+
+document.getElementById("sideMenu").classList.toggle("active");
+
+});
+
+}
