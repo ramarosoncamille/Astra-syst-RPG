@@ -297,7 +297,7 @@ color:#7dd3fc;
       XP / NIVEAU / RANG
 =========================== */
 
-.rpg{
+.rpg-info
 
 display:flex;
 
@@ -307,7 +307,7 @@ margin-top:12px;
 
 }
 
-.rpg p{
+.rpg-info p{
 
 flex:1;
 
@@ -470,7 +470,7 @@ font-size:18px;
 
 }
 
-.rpg p{
+.rpg-info p{
 
 font-size:20px;
 
@@ -483,6 +483,545 @@ button{
 font-size:22px;
 
 padding:18px;
+
+}
+
+}
+
+/*==================================================
+                DASHBOARD RPG PREMIUM
+==================================================*/
+
+.dashboard{
+
+width:100%;
+height:100vh;
+
+padding:35px;
+
+overflow-y:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+animation:fadeUp .8s ease;
+
+}
+
+/*==========================
+        HEADER
+===========================*/
+
+.profile-header{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+padding:30px;
+
+background:rgba(255,255,255,.07);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+
+0 0 25px rgba(0,255,255,.12);
+
+}
+
+.avatar-large{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid cyan;
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 50px rgba(0,255,255,.35);
+
+transition:.4s;
+
+}
+
+.avatar-large:hover{
+
+transform:scale(1.08);
+
+}
+
+.profile-right{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.profile-right h1{
+
+font-size:56px;
+
+margin-bottom:15px;
+
+text-shadow:
+
+0 0 20px cyan;
+
+}
+
+.profile-right p{
+
+font-size:24px;
+
+opacity:.85;
+
+max-width:800px;
+
+line-height:1.5;
+
+}
+
+/*==========================
+      XP ET RANG
+===========================*/
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.hero-card{
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 25px rgba(0,255,255,.15);
+
+transition:.35s;
+
+}
+
+.hero-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 0 35px cyan,
+
+0 0 70px rgba(0,255,255,.25);
+
+}
+
+.hero-title{
+
+font-size:34px;
+
+font-weight:bold;
+
+margin-bottom:20px;
+
+letter-spacing:1px;
+
+}
+
+.hero-number{
+
+font-size:150px;
+
+font-weight:900;
+
+line-height:1;
+
+background:linear-gradient(
+
+90deg,
+
+#00f7ff,
+
+#5ef7c6,
+
+#ffffff
+
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+
+0 0 30px rgba(0,255,255,.35);
+
+animation:pulseHero 2s infinite;
+
+}
+
+@keyframes pulseHero{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/*==========================
+      STATISTIQUES
+===========================*/
+
+.stats-box{
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+.stats-box h2{
+
+font-size:38px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+text-shadow:
+
+0 0 15px cyan;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:25px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:15px;
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+background:rgba(0,255,255,.12);
+
+box-shadow:
+
+0 0 25px cyan;
+
+}
+
+.stat-card span{
+
+font-size:24px;
+
+font-weight:600;
+
+}
+
+.stat-card strong{
+
+font-size:34px;
+
+color:#67e8f9;
+
+}
+
+/*==========================
+      MENU
+===========================*/
+
+.menu-section{
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.menu-section h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:30px;
+
+}
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.menu-btn{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+padding:25px;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:white;
+
+border-radius:20px;
+
+background:linear-gradient(
+
+135deg,
+
+rgba(0,255,255,.18),
+
+rgba(255,255,255,.08)
+
+);
+
+border:1px solid rgba(255,255,255,.15);
+
+transition:.35s;
+
+box-shadow:
+
+0 0 18px rgba(0,255,255,.08);
+
+}
+
+.menu-btn:hover{
+
+transform:translateY(-8px);
+
+background:linear-gradient(
+
+135deg,
+
+#06b6d4,
+
+#3b82f6
+
+);
+
+box-shadow:
+
+0 0 35px cyan,
+
+0 0 60px rgba(0,255,255,.25);
+
+}
+
+/*==========================
+      SCROLLBAR
+===========================*/
+
+.dashboard::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+.dashboard::-webkit-scrollbar-thumb{
+
+background:cyan;
+
+border-radius:20px;
+
+}
+
+.dashboard::-webkit-scrollbar-track{
+
+background:transparent;
+
+}
+
+/*==========================
+      RESPONSIVE
+===========================*/
+
+@media(max-width:1200px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.menu-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero-number{
+
+font-size:110px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.avatar-large{
+
+width:150px;
+
+height:150px;
+
+}
+
+.profile-right h1{
+
+font-size:40px;
+
+}
+
+.profile-right p{
+
+font-size:20px;
+
+}
+
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-number{
+
+font-size:90px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.menu-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.menu-btn{
+
+font-size:20px;
+
+}
+
+.stats-box h2,
+
+.menu-section h2{
+
+font-size:30px;
 
 }
 
