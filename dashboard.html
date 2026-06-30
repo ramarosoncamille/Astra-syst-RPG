@@ -217,35 +217,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
    
 </div>
 
-<script>
-
-const player = JSON.parse(localStorage.getItem("player"));
-
-if(player){
-
-document.getElementById("playerName").innerHTML =
-player.name;
-
-document.getElementById("playerGoal").innerHTML =
-player.goal;
-
-document.getElementById("playerXP").innerHTML =
-player.xp;
-
-document.getElementById("playerRank").innerHTML =
-player.rank;
-
-if(player.avatar){
-
-document.getElementById("playerAvatar").src =
-player.avatar;
-
-}
-
-}
-
-</script>
-
     <!-- MENU LATERAL -->
 
 <div id="sideMenu" class="side-menu">
@@ -267,6 +238,8 @@ player.avatar;
     <a href="vie.html">🏡 Vie personnelle</a>
 
 </div>
+    
+        <script src="app.js"></script>
     
 </body>
 </html>
