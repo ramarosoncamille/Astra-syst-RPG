@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Astra RPG - Profil</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="profile-header">
+
+        <div class="profile-left">
+
+            <img id="playerAvatar"
+            src="https://via.placeholder.com/200"
+            class="avatar-large">
+
+        </div>
+
+        <div class="profile-right">
+
+            <h1 id="playerName">Joueur</h1>
+
+            <p id="playerGoal">
+                Objectif de vie
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= XP + RANG ================= -->
+
+    <section class="hero-stats">
+
+        <div class="hero-card xp-card">
+
+            <div class="hero-title">
+                XP
+            </div>
+
+            <div id="playerXP"
+            class="hero-number">
+
+                0
+
+            </div>
+
+        </div>
+
+        <div class="hero-card rank-card">
+
+            <div class="hero-title">
+                Rang
+            </div>
+
+            <div id="playerRank"
+            class="hero-number">
+
+                F
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTIQUES ================= -->
+
+    <section class="stats-box">
+
+        <h2>
+            📊 Statistiques de niveau
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                🧠
+                <span>Intelligence</span>
+
+                <strong id="intelLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                ❤️
+                <span>Santé</span>
+
+                <strong id="healthLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                🛡
+                <span>Discipline</span>
+
+                <strong id="disciplineLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                💰
+                <span>Finance</span>
+
+                <strong id="financeLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                🤝
+                <span>Social</span>
+
+                <strong id="socialLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                🎨
+                <span>Créativité</span>
+
+                <strong id="creativityLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                ⚙️
+                <span>Productivité</span>
+
+                <strong id="productivityLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                🏡
+                <span>Vie personnelle</span>
+
+                <strong id="lifeLv">
+
+                    Lv.1
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section class="menu-section">
+
+        <h2>
+
+            🌟 Menu des compétences
+
+        </h2>
+
+        <div class="menu-grid">
+
+            <a href="intelligence.html" class="menu-btn">
+                🧠 Intelligence
+            </a>
+
+            <a href="sante.html" class="menu-btn">
+                ❤️ Santé
+            </a>
+
+            <a href="discipline.html" class="menu-btn">
+                🛡 Discipline
+            </a>
+
+            <a href="finance.html" class="menu-btn">
+                💰 Finance
+            </a>
+
+            <a href="social.html" class="menu-btn">
+                🤝 Social
+            </a>
+
+            <a href="creativite.html" class="menu-btn">
+                🎨 Créativité
+            </a>
+
+            <a href="productivite.html" class="menu-btn">
+                ⚙️ Productivité
+            </a>
+
+            <a href="vie.html" class="menu-btn">
+                🏡 Vie personnelle
+            </a>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+<script>
+
+const player = JSON.parse(localStorage.getItem("player"));
+
+if(player){
+
+document.getElementById("playerName").innerHTML =
+player.name;
+
+document.getElementById("playerGoal").innerHTML =
+player.goal;
+
+document.getElementById("playerXP").innerHTML =
+player.xp;
+
+document.getElementById("playerRank").innerHTML =
+player.rank;
+
+if(player.avatar){
+
+document.getElementById("playerAvatar").src =
+player.avatar;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
