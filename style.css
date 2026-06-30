@@ -1026,3 +1026,117 @@ font-size:30px;
 }
 
 }
+
+/*==========================
+      MENU HAMBURGER
+===========================*/
+
+.profile-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+width:100%;
+
+}
+
+.menu-toggle{
+
+width:65px;
+
+height:65px;
+
+border-radius:15px;
+
+font-size:34px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+cursor:pointer;
+
+color:white;
+
+transition:.3s;
+
+box-shadow:0 0 20px rgba(0,255,255,.15);
+
+}
+
+.menu-toggle:hover{
+
+background:#00c8ff;
+
+transform:rotate(90deg);
+
+box-shadow:0 0 25px cyan;
+
+}
+
+.side-menu{
+
+position:fixed;
+
+top:0;
+
+right:-330px;
+
+width:320px;
+
+height:100%;
+
+background:rgba(10,15,30,.98);
+
+backdrop-filter:blur(20px);
+
+padding-top:120px;
+
+transition:.4s;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+z-index:9999;
+
+box-shadow:-5px 0 25px rgba(0,255,255,.25);
+
+}
+
+.side-menu.active{
+
+right:0;
+
+}
+
+.side-menu a{
+
+padding:22px 30px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:22px;
+
+transition:.3s;
+
+border-left:4px solid transparent;
+
+}
+
+.side-menu a:hover{
+
+background:rgba(0,255,255,.12);
+
+border-left:4px solid cyan;
+
+padding-left:40px;
+
+}
